@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+    
+    /* RealTokens specific colors */
+    --real-bg: 60 33% 97%;
+    --real-text: 240 5.9% 10%;
+    --real-muted: 240 3.8% 46.1%;
+    --real-accent: 35 25% 60%;
+    --real-border: 35 25% 90%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    
+    /* RealTokens specific colors - dark mode */
+    --real-bg: 240 10% 10%;
+    --real-text: 0 0% 98%;
+    --real-muted: 240 5% 64.9%;
+    --real-accent: 35 25% 50%;
+    --real-border: 240 3.7% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fix spacing between navbar and content */
+main {
+  padding-top: 5rem;
+}
+
+@layer utilities {
+  .real-bg {
+    @apply bg-[#f8f7f4] dark:bg-gray-900;
+  }
+  
+  .real-bg-accent {
+    @apply bg-[#9b9b8c] dark:bg-[#9b9b8c];
+  }
+  
+  .real-text {
+    @apply text-[#3c3c3c] dark:text-white;
+  }
+  
+  .real-muted {
+    @apply text-[#5c5c5c] dark:text-gray-400;
+  }
+  
+  .real-accent {
+    @apply text-[#9b9b8c] dark:text-[#9b9b8c];
+  }
+  
+  .real-border {
+    @apply border-[#e8e6e1] dark:border-gray-700;
+  }
+  
+  .hero-overlay {
+    @apply absolute inset-0 bg-black/30 dark:bg-black/50;
+  }
+  
+  .navbar-fixed {
+    @apply fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 shadow-md backdrop-blur-md transition-all duration-300;
+  }
+  
+  .navbar-transparent {
+    @apply absolute top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+}
