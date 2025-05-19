@@ -40,7 +40,7 @@ export default function HomePage() {
       <div ref={targetRef} className="relative h-screen w-full overflow-hidden">
         <motion.div style={{ opacity, scale, y }} className="absolute inset-0 h-full w-full">
           <Image
-            src="/placeholder.svg?height=1080&width=1920&text=Real+Estate+Tokenization"
+            src="/images/cityscape.jpg?height=1080&width=1920&text=Real+Estate+Tokenization"
             alt="Real Estate Tokenization"
             fill
             priority

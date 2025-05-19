@@ -37,15 +37,15 @@ export default function Navbar({ transparent = false }) {
     ? scrolled 
       ? "navbar-fixed" 
       : "navbar-transparent" 
-    : "bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800";
+    : "bg-white dark:bg-gray-900 border-b  border-gray-200 dark:border-gray-800";
 
   const textColorClass = (!transparent || scrolled) 
     ? "text-gray-900 dark:text-white" 
-    : "text-white";
+    : "text-gray-900 dark:text-white";
 
   const linkColorClass = (!transparent || scrolled) 
     ? "text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" 
-    : "text-white/80 hover:text-white";
+    : "text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white";
 
   return (
     <motion.header
